@@ -10,6 +10,91 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+
+        //------------------------------------------Vehiculos INICIO
+        {
+          title: true,
+          name: 'INDICE'
+        },
+
+        {
+          name: 'Vehiculos',
+          url: '/vehiculo',
+          iconComponent:{name: 'cil-puzzle'},
+          children: [
+            {
+              name:'Registrar',
+              url: '/vehiculos/vehiculo',
+              icon:'nav-icon-bullet',
+            },
+            {
+              name:'Reportes',
+              url: '/vehiculos/reportes',
+              icon:'nav-icon-bullet',
+            },
+          ]
+        },
+
+        {
+          name: 'Espacios',
+          url: '/espacios',
+          iconComponent:{name: 'cil-puzzle'},
+          children: [
+            {
+              name:'Ver',
+              url: '/vehiculos/espacios',
+              icon:'nav-icon-bullet',
+            },
+            {
+              name:'Reportes',
+              url: '/vehiculos/reportes',
+              icon:'nav-icon-bullet',
+            },
+          ]
+        },
+
+        {
+          name: 'Tickets',
+          url: '/ticket',
+          iconComponent:{name: 'cil-puzzle'},
+          children: [
+            {
+              name:'Registro',
+              url: '/vehiculos/ticket',
+              icon:'nav-icon-bullet',
+            },
+            {
+              name:'Reportes',
+              url: '/vehiculos/reportes',
+              icon:'nav-icon-bullet',
+            },
+          ]
+        },
+        {
+          name: 'Empleado',
+          url: '/empleado',
+          iconComponent:{name: 'cil-puzzle'},
+          children: [
+            {
+              name:'Registro',
+              url: '/vehiculos/empleado',
+              icon:'nav-icon-bullet',
+            },
+            {
+              name:'Reportes',
+              url: '/vehiculos/reportes',
+              icon:'nav-icon-bullet',
+            },
+          ]
+        },
+        {
+          name: 'Balances',
+          url: '/Balance',
+          iconComponent:{name: 'cil-puzzle'},
+        },
+        
+        //------------------------------------------Vehiculos FINAL
+
   {
     title: true,
     name: 'Theme'

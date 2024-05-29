@@ -13,10 +13,16 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
+
+    
     children: [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
+      },
+      {
+        path: 'vehiculos',
+        loadChildren: () => import('./views/vehiculos/routes').then((m) => m.routes)
       },
       {
         path: 'theme',
