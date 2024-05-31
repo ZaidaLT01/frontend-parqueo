@@ -5,7 +5,13 @@ import {
     CardComponent,CardHeaderComponent, 
     CardBodyComponent,
     FormControlDirective,
-    BorderDirective, } 
+    BorderDirective,
+    TableDirective,
+    TableColorDirective,
+    TableActiveDirective,
+    ButtonDirective,
+  
+  } 
 from '@coreui/angular';
 import { DocsExampleComponent } from '@docs-components/public-api';
 
@@ -15,7 +21,11 @@ import { DocsExampleComponent } from '@docs-components/public-api';
   imports: [RowComponent, ColComponent, 
     CardComponent,CardHeaderComponent, 
     CardBodyComponent,NgStyle,DocsExampleComponent,
-    FormControlDirective,BorderDirective
+    FormControlDirective,BorderDirective,
+
+    TableDirective, 
+    TableColorDirective, TableActiveDirective, 
+    ButtonDirective 
     ],
   templateUrl: './reportes.component.html',
   styleUrl: './reportes.component.scss'

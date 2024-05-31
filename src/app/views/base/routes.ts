@@ -89,7 +89,7 @@ export const routes: Routes = [
           title: 'Progress'
         }
       },
-      {
+     /* {
         path: 'spinners',
         loadComponent: () => import('./spinners/spinners.component').then(m => m.SpinnersComponent),
         data: {
@@ -116,7 +116,7 @@ export const routes: Routes = [
         data: {
           title: 'Tooltips'
         }
-      }
+      }*/
     ]
   }
 ];

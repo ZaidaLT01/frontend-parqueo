@@ -3,12 +3,84 @@
         <h2>REPORTE VEHICULOS</h2>
         <c-card class="mb-4">
             <c-card-header>
-            <strong>Vehiculos por Usuario</strong>
+            <strong>Reporte Vehiculos por Usuario </strong>
             </c-card-header>
             <c-card-body>
-                holis
-                commo
+              <label cLabel for="exampleFormControlInput1">Ingrese Usuario a buscar</label>
+                    <input cFormControl
+                           id="exampleFormControlInput1"
+                           placeholder="Ingrese usuario"
+                           name="usuario"
+                           type="text"
+                    />
+              <button cButton color="dark" variant="outline">Mostrar</button>
+                <c-col xs="12">
+                    <table [striped]="true" cTable color="warning">
+                      <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Mark</td>
+                      </tr>
+                      
+                      </tbody>
+                    </table>
+                  </c-col>
             </c-card-body>
         </c-card>
+
+        <c-card class="mb-4">
+            <c-card-header>
+            <strong>Reporte 2</strong>
+            </c-card-header>
+            <c-card-body>
+                <c-col xs="12">
+                  <button cButton color="dark" variant="outline">Mostrar</button>
+                    <table [striped]="true" cTable color="warning">
+                      <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Mark</td>
+                        <td>
+                          
+
+                         </td>
+                      </tr>
+                      
+                      </tbody>
+                    </table>
+                  </c-col>
+            </c-card-body>
+        </c-card>
+
     </c-col>
 </c-row>

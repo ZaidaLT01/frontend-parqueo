@@ -12,35 +12,54 @@
                     <input cFormControl
                            id="exampleFormControlInput1"
                            placeholder="Ingrese marca"
-                           type=""
+                           [(ngModel)] = "vehiculoModelo.marca"
+                           name="marca"
+                           type="text"
                     />
                     <label cLabel for="exampleFormControlInput1">Modelo</label>
                     <input cFormControl
                            id="modelo"
                            placeholder="Ingrese Modelo"
+                           [(ngModel)] = "vehiculoModelo.modelo"
+                           name="modelo"
                            type="text"
                     />
                     <label cLabel for="exampleFormControlInput1">Color</label>
                     <input cFormControl
                            id="color"
                            placeholder="Ingrese Color"
+                           [(ngModel)] = "vehiculoModelo.color"
+                           name="color"
                            type="text"
                     />
                     <label cLabel for="exampleFormControlInput1">Placa</label>
                     <input cFormControl
                            id="placa"
                            placeholder="Ingrese Placa"
+                           [(ngModel)] = "vehiculoModelo.placa"
+                           name="placa"
                            type="text"
                     />
+
                     <label cLabel for="exampleFormControlInput1">Usuario</label>
-                    <select aria-label="Seleccione usuario" cSelect>
+                    <input cFormControl
+                           id="usuario"
+                           placeholder="Ingrese Usuario"
+                           [(ngModel)] = "vehiculoModelo.usuario"
+                           name="usuario"
+                           type="text"
+                    />
+
+                    <!--<label cLabel for="exampleFormControlInput1">Usuario</label>
+                    <select  [(ngModel)] = "vehiculoModelo.usuario" aria-label="Seleccione usuario" cSelect >
                       <option>Seleccione usuario</option>
-                      <option value="1">Julia</option>
-                      <option value="2">Esteban</option>
-                      <option value="3">Ester</option>
-                    </select>
+                      <option value="664fa550509e48bed84d622f">Zaida</option>
+                      <option value="664fa589509e48bed84d6231">Prueba</option>
+                      <option value="664febb039a63930baec7366">X</option>
+                    </select>-->
+
                   </div> 
-                  <button cButton class="me-2" color="warning" type="submit">
+                  <button (click) = "guardarVehiculo()" cButton class="me-2" color="warning" type="submit">
                     Button
                   </button>
 
@@ -48,38 +67,43 @@
                 
             </c-card-body>
           </c-card>
+
+  
+                <c-col xs="12">
+                    <table [striped]="true" cTable color="warning">
+                      <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        @for (vehiculo of listaVehiculos; track $index;){
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>{{vehiculo.marca}}</td>
+                            <td>{{vehiculo.modelo}}</td>
+                            <td>{{vehiculo.color}}</td>
+                            <td>{{vehiculo.placa}}</td>
+                            <td>{{vehiculo.usuario}}</td>
+                            <td>
+                              <button  (click)="verVehiculo(vehiculo)" cButton color="dark" variant="outline">Editar</button>
+                              
+                              <button (click)="eliminarVehiculo(vehiculo)" cButton color="danger" variant="outline">Eliminar</button>
+                             </td>
+                          </tr>
+                        }
+                      
+                      
+                      </tbody>
+                    </table>
+                  </c-col>
+
+
     </c-col>
-
-<c-col xs="12">
-  <table [striped]="true" cTable color="warning">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Modelo</th>
-      <th scope="col">Color</th>
-      <th scope="col">Placa</th>
-      <th scope="col">Usuario</th>
-      <th scope="col">Acciones</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Mark</td>
-      <td>
-        <button cButton color="dark" variant="outline">Editar</button>
-        
-        <button cButton color="danger" variant="outline">Eliminar</button>
-       </td>
-    </tr>
-    
-    </tbody>
-  </table>
-</c-col>
-
 </c-row>
